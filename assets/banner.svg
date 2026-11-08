@@ -7,8 +7,8 @@
     </linearGradient>
     <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15"/>
-      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="75%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#22d3ee" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.15"/>
     </linearGradient>
     <linearGradient id="under" x1="0" y1="0" x2="1" y2="0">
@@ -22,18 +22,17 @@
       <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
     </radialGradient>
-  <style>
+    <style>
       .name { font: 700 62px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #e9eff8; letter-spacing: -1.2px; }
       .role { font: 500 19px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #93a9c0; letter-spacing: 3.4px; }
       .meta { font: 400 17px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #6f879e; letter-spacing: 0.4px; }
-      .live { font: 500 14px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #4ade80; letter-spacing: 1.6px; }
+      .pill { fill: #10231a; stroke: #1f4d33; stroke-width: 1; }
+      .live { font: 600 13px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #4ade80; letter-spacing: 1.5px; }
       .run { animation: run 7s linear infinite; }
       @keyframes run { from { stroke-dashoffset: 1510; } to { stroke-dashoffset: 0; } }
       .breathe { animation: breathe 4.5s ease-in-out infinite; }
       @keyframes breathe { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
-      @media (prefers-reduced-motion: reduce) {
-        .run, .breathe { animation: none; }
-      }
+      @media (prefers-reduced-motion: reduce) { .run, .breathe { animation: none; } }
     </style>
   </defs>
 
@@ -47,8 +46,9 @@
   <text class="role" x="82" y="206">MACHINE LEARNING ENGINEER</text>
   <text class="meta" x="82" y="238">Computer vision / explainable AI / forecasting systems</text>
 
-  <circle class="breathe" cx="1166" cy="118" r="4" fill="#4ade80"/>
-  <text class="live" x="1184" y="123">NIGHTLY LIVE</text>
+  <rect class="pill" x="1040" y="93" width="160" height="30" rx="15"/>
+  <circle class="breathe" cx="1060" cy="108" r="4" fill="#4ade80"/>
+  <text class="live" x="1074" y="113">NIGHTLY LIVE</text>
 
   <path d="M80 296 L140 287 L200 292 L260 274 L320 283 L380 266 L440 277 L500 259 L560 271 L620 247 L680 262 L740 243 L800 256 L860 237 L920 251 L980 232 L1040 247 L1100 228 L1160 242 L1200 234"
         fill="none" stroke="url(#trace)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
