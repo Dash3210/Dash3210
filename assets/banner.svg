@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Daksh Shah - Machine Learning Engineer, computer vision and explainable AI">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070c16"/>
+      <stop offset="55%" stop-color="#0c1424"/>
+      <stop offset="100%" stop-color="#0a1120"/>
+    </linearGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#22d3ee" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="under" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#16223a" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.15" cy="0.35" r="0.9">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .name { font: 700 62px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #e9eff8; letter-spacing: -1.2px; }
+      .role { font: 500 19px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #93a9c0; letter-spacing: 3.4px; }
+      .meta { font: 400 17px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #6f879e; letter-spacing: 0.4px; }
+      .live { font: 500 14px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #4ade80; letter-spacing: 1.6px; }
+      .pulse { animation: pulse 4.5s ease-in-out infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+      .draw {
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 1500;
+        animation: draw 11s cubic-bezier(.4,0,.2,1) infinite;
+      }
+      @keyframes draw {
+        0%   { stroke-dashoffset: 1500; opacity: 0; }
+        6%   { opacity: 1; }
+        62%  { stroke-dashoffset: 0; opacity: 1; }
+        88%  { stroke-dashoffset: 0; opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+      .beat { animation: beat 3.2s ease-out infinite; transform-origin: 1176px 118px; }
+      @keyframes beat { 0% { opacity: 0.9; r: 4; } 70% { opacity: 0; r: 13; } 100% { opacity: 0; r: 13; } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#grid)" opacity="0.5"/>
+  <rect width="1280" height="320" fill="url(#glow)"/>
+
+  <rect x="80" y="96" width="48" height="3" rx="1.5" fill="url(#under)"/>
+
+  <text class="name" x="80" y="164">Daksh Shah</text>
+  <text class="role" x="82" y="206">MACHINE LEARNING ENGINEER</text>
+  <text class="meta" x="82" y="238">Computer vision / explainable AI / forecasting systems</text>
+
+  <circle class="pulse" cx="1176" cy="118" r="4" fill="#4ade80"/>
+  <circle class="beat" cx="1176" cy="118" r="4" fill="#4ade80"/>
+  <text class="live" x="1194" y="123">NIGHTLY LIVE</text>
+
+  <path class="draw"
+        d="M80 296 L140 287 L200 292 L260 274 L320 283 L380 266 L440 277 L500 259 L560 271 L620 247 L680 262 L740 243 L800 256 L860 237 L920 251 L980 232 L1040 247 L1100 228 L1160 242 L1200 234"
+        fill="none" stroke="url(#trace)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
