@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="Daksh Shah - Machine Learning Engineer, computer vision and explainable AI" width="100%">
+  <img src="./assets/banner.svg?v=2" alt="Daksh Shah - Machine Learning Engineer, computer vision and explainable AI" width="100%">
 </p>
 
 **Machine Learning Engineer** - computer vision, explainable AI, and the engineering that makes a
