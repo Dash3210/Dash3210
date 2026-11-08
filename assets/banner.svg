@@ -1,59 +1,180 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Daksh Shah - Machine Learning Engineer, computer vision and explainable AI">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img" aria-label="Daksh Shah, Machine Learning Engineer. An animated pull switch: pull to light the name, watch it scatter, then the bulb shorts and everything returns.">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#070c16"/>
-      <stop offset="55%" stop-color="#0c1424"/>
-      <stop offset="100%" stop-color="#0a1120"/>
+      <stop offset="0%" stop-color="#070c16"/><stop offset="55%" stop-color="#0c1424"/><stop offset="100%" stop-color="#0a1120"/>
     </linearGradient>
     <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15"/>
-      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.85"/>
-      <stop offset="75%" stop-color="#22d3ee" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15"/><stop offset="25%" stop-color="#38bdf8" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#22d3ee" stop-opacity="0.85"/><stop offset="100%" stop-color="#22d3ee" stop-opacity="0.15"/>
     </linearGradient>
-    <linearGradient id="under" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.15"/>
-    </linearGradient>
+    <radialGradient id="lamp" cx="0.5" cy="0.15" r="0.85">
+      <stop offset="0%" stop-color="#fff3d0" stop-opacity="0.85"/><stop offset="45%" stop-color="#ffd48a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0 L0 0 0 40" fill="none" stroke="#16223a" stroke-width="1"/>
     </pattern>
-    <radialGradient id="glow" cx="0.15" cy="0.35" r="0.9">
-      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
-    </radialGradient>
     <style>
-      .name { font: 700 62px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #e9eff8; letter-spacing: -1.2px; }
-      .role { font: 500 19px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #93a9c0; letter-spacing: 3.4px; }
-      .meta { font: 400 17px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #6f879e; letter-spacing: 0.4px; }
-      .pill { fill: #10231a; stroke: #1f4d33; stroke-width: 1; }
-      .live { font: 600 13px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #4ade80; letter-spacing: 1.5px; }
-      .run { animation: run 7s linear infinite; }
+      .glyph { font: 700 66px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #e9eff8; letter-spacing: -1px; text-anchor: middle; transform-box: fill-box; transform-origin: 50% 50%; }
+      .lev   { transform-box: fill-box; transform-origin: 50% 50%; }
+      .role  { font: 500 19px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #93a9c0; letter-spacing: 3.4px; }
+      .meta  { font: 400 17px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #6f879e; letter-spacing: 0.4px; }
+      .pull  { font: 600 13px "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #7c93aa; letter-spacing: 2.4px; text-anchor: middle; }
+
+      .lamp { animation: lamp 16s linear infinite; opacity: 0; }
+      @keyframes lamp {
+        0%, 61%   { opacity: 0; }
+        64%       { opacity: 0.15; }
+        65%, 66%  { opacity: 0.9; }
+        72%       { opacity: 0.75; }
+        84%       { opacity: 0.55; }
+        86%       { opacity: 0.9; }
+        87%       { opacity: 0.12; }
+        88%       { opacity: 0.75; }
+        89%       { opacity: 0.05; }
+        90%       { opacity: 0.45; }
+        91%, 100% { opacity: 0; }
+      }
+
+      .cord { animation: cord 16s linear infinite; }
+      @keyframes cord { 0%,59% { transform: translateY(0); } 62% { transform: translateY(14px); } 64% { transform: translateY(9px); } 67%,100% { transform: translateY(0); } }
+
+      .trace { animation: trace 16s linear infinite; }
+      @keyframes trace {
+        0%,61% { opacity: 0.55; } 65%,86% { opacity: 1; } 87% { opacity: 0.3; }
+        88% { opacity: 0.9; } 89% { opacity: 0.2; } 90%,100% { opacity: 0.55; }
+      }
+      .runner { animation: run 7s linear infinite; }
       @keyframes run { from { stroke-dashoffset: 1510; } to { stroke-dashoffset: 0; } }
-      .breathe { animation: breathe 4.5s ease-in-out infinite; }
-      @keyframes breathe { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
-      @media (prefers-reduced-motion: reduce) { .run, .breathe { animation: none; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .glyph, .lev, .lamp, .cord, .trace, .runner { animation: none !important; opacity: 1; }
+        .lamp { opacity: 0; }
+        .trace { opacity: 0.55; }
+      }
+
+@keyframes fly0 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  64.0% { transform: translate(63px,-45px) rotate(16deg) scale(0.96); fill: #fff3d6; }
+  70.0% { transform: translate(139px,-100px) rotate(41deg) scale(0.93); }
+  78.0% { transform: translate(338px,-91px) rotate(227deg) scale(1.48); fill: #ffe9b8; }
+  84.0% { transform: translate(187px,-54px) rotate(-27deg) scale(1.09); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly1 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  64.3% { transform: translate(-108px,-22px) rotate(-46deg) scale(1.03); fill: #fff3d6; }
+  70.3% { transform: translate(-240px,-49px) rotate(-114deg) scale(1.06); }
+  78.3% { transform: translate(152px,-96px) rotate(96deg) scale(1.25); fill: #ffe9b8; }
+  84.3% { transform: translate(150px,172px) rotate(-39deg) scale(1.05); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly2 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  64.7% { transform: translate(105px,29px) rotate(-19deg) scale(0.90); fill: #fff3d6; }
+  70.7% { transform: translate(233px,65px) rotate(-47deg) scale(0.79); }
+  78.7% { transform: translate(-52px,235px) rotate(-190deg) scale(1.16); fill: #ffe9b8; }
+  84.7% { transform: translate(-165px,102px) rotate(121deg) scale(0.77); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly3 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  65.0% { transform: translate(94px,61px) rotate(10deg) scale(0.92); fill: #fff3d6; }
+  71.0% { transform: translate(209px,136px) rotate(24deg) scale(0.84); }
+  79.0% { transform: translate(328px,197px) rotate(232deg) scale(1.01); fill: #ffe9b8; }
+  85.0% { transform: translate(-234px,51px) rotate(-107deg) scale(0.99); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly4 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  65.4% { transform: translate(59px,-43px) rotate(61deg) scale(1.03); fill: #fff3d6; }
+  71.4% { transform: translate(131px,-96px) rotate(153deg) scale(1.05); }
+  79.4% { transform: translate(422px,-68px) rotate(-106deg) scale(0.91); fill: #ffe9b8; }
+  85.4% { transform: translate(-198px,-43px) rotate(49deg) scale(0.78); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly5 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  65.8% { transform: translate(87px,24px) rotate(46deg) scale(0.98); fill: #fff3d6; }
+  71.8% { transform: translate(194px,54px) rotate(115deg) scale(0.97); }
+  79.8% { transform: translate(553px,47px) rotate(46deg) scale(1.09); fill: #ffe9b8; }
+  85.8% { transform: translate(-77px,130px) rotate(-78deg) scale(1.04); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly6 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  66.1% { transform: translate(24px,-55px) rotate(-17deg) scale(0.99); fill: #fff3d6; }
+  72.1% { transform: translate(54px,-122px) rotate(-43deg) scale(0.99); }
+  80.1% { transform: translate(-200px,70px) rotate(-320deg) scale(1.29); fill: #ffe9b8; }
+  86.1% { transform: translate(56px,-43px) rotate(-104deg) scale(0.95); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly7 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  66.5% { transform: translate(-121px,-27px) rotate(-0deg) scale(1.09); fill: #fff3d6; }
+  72.5% { transform: translate(-268px,-61px) rotate(-1deg) scale(1.18); }
+  80.5% { transform: translate(-257px,-30px) rotate(213deg) scale(1.48); fill: #ffe9b8; }
+  86.5% { transform: translate(-59px,165px) rotate(-113deg) scale(0.97); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+@keyframes fly8 {
+  0%, 60%   { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+  66.8% { transform: translate(104px,35px) rotate(6deg) scale(0.88); fill: #fff3d6; }
+  72.8% { transform: translate(232px,77px) rotate(14deg) scale(0.75); }
+  80.8% { transform: translate(-411px,-209px) rotate(-175deg) scale(1.39); fill: #ffe9b8; }
+  86.8% { transform: translate(-145px,183px) rotate(36deg) scale(1.08); }
+  88%       { transform: translate(0,0) rotate(0deg) scale(1); fill: #ffd166; }
+  92%, 100% { transform: translate(0,0) rotate(0deg) scale(1); fill: #e9eff8; }
+}
+
+@keyframes lev0 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-3.6px); } }
+@keyframes lev1 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-4.0px); } }
+@keyframes lev2 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-4.3px); } }
+@keyframes lev3 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-2.8px); } }
+@keyframes lev4 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-3.8px); } }
+@keyframes lev6 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-3.9px); } }
+@keyframes lev7 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-3.0px); } }
+@keyframes lev8 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-4.7px); } }
+@keyframes lev9 { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-3.2px); } }
     </style>
   </defs>
 
-  <rect width="1280" height="320" fill="url(#bg)"/>
-  <rect width="1280" height="320" fill="url(#grid)" opacity="0.5"/>
-  <rect width="1280" height="320" fill="url(#glow)"/>
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#grid)" opacity="0.45"/>
+  <rect class="lamp" width="1280" height="360" fill="url(#lamp)"/>
 
-  <rect x="80" y="96" width="48" height="3" rx="1.5" fill="url(#under)"/>
+  <rect x="80" y="112" width="48" height="3" rx="1.5" fill="#38bdf8"/>
 
-  <text class="name" x="80" y="164">Daksh Shah</text>
-  <text class="role" x="82" y="206">MACHINE LEARNING ENGINEER</text>
-  <text class="meta" x="82" y="238">Computer vision / explainable AI / forecasting systems</text>
+  <g class="lev" style="animation: lev0 5.30s ease-in-out -3.88s infinite"><text class="glyph" style="animation: fly0 16s linear infinite" x="105.8" y="205">D</text></g>
+  <g class="lev" style="animation: lev1 4.25s ease-in-out -0.56s infinite"><text class="glyph" style="animation: fly1 16s linear infinite" x="156.2" y="205">A</text></g>
+  <g class="lev" style="animation: lev2 4.50s ease-in-out -3.1s infinite"><text class="glyph" style="animation: fly2 16s linear infinite" x="205.1" y="205">K</text></g>
+  <g class="lev" style="animation: lev3 5.34s ease-in-out -4.75s infinite"><text class="glyph" style="animation: fly3 16s linear infinite" x="251.0" y="205">S</text></g>
+  <g class="lev" style="animation: lev4 5.02s ease-in-out -3.88s infinite"><text class="glyph" style="animation: fly4 16s linear infinite" x="298.4" y="205">H</text></g>
+  <g class="lev" style="animation: lev6 3.73s ease-in-out -1.54s infinite"><text class="glyph" style="animation: fly6 16s linear infinite" x="366.3" y="205">S</text></g>
+  <g class="lev" style="animation: lev7 4.79s ease-in-out -0.77s infinite"><text class="glyph" style="animation: fly7 16s linear infinite" x="413.7" y="205">H</text></g>
+  <g class="lev" style="animation: lev8 4.58s ease-in-out -3.61s infinite"><text class="glyph" style="animation: fly8 16s linear infinite" x="464.2" y="205">A</text></g>
+  <g class="lev" style="animation: lev9 5.21s ease-in-out -1.5s infinite"><text class="glyph" style="animation: fly9 16s linear infinite" x="514.7" y="205">H</text></g>
 
-  <rect class="pill" x="1040" y="93" width="160" height="30" rx="15"/>
-  <circle class="breathe" cx="1060" cy="108" r="4" fill="#4ade80"/>
-  <text class="live" x="1074" y="113">NIGHTLY LIVE</text>
+  <text class="role" x="82" y="252">MACHINE LEARNING ENGINEER</text>
+  <text class="meta" x="82" y="284">Computer vision / explainable AI / forecasting systems</text>
 
-  <path d="M80 296 L140 287 L200 292 L260 274 L320 283 L380 266 L440 277 L500 259 L560 271 L620 247 L680 262 L740 243 L800 256 L860 237 L920 251 L980 232 L1040 247 L1100 228 L1160 242 L1200 234"
+  <path class="trace" d="M80 330 L140 321 L200 326 L260 308 L320 317 L380 300 L440 311 L500 293 L560 305 L620 281 L680 296 L740 277 L800 290 L860 271 L920 285 L980 266 L1040 281 L1100 262 L1160 276 L1200 268"
         fill="none" stroke="url(#trace)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path class="run"
-        d="M80 296 L140 287 L200 292 L260 274 L320 283 L380 266 L440 277 L500 259 L560 271 L620 247 L680 262 L740 243 L800 256 L860 237 L920 251 L980 232 L1040 247 L1100 228 L1160 242 L1200 234"
-        fill="none" stroke="#7dd3fc" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
-        stroke-dasharray="110 1400"/>
+  <path class="runner" d="M80 330 L140 321 L200 326 L260 308 L320 317 L380 300 L440 311 L500 293 L560 305 L620 281 L680 296 L740 277 L800 290 L860 271 L920 285 L980 266 L1040 281 L1100 262 L1160 276 L1200 268"
+        fill="none" stroke="#7dd3fc" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="110 1400"/>
+
+  <g class="cord">
+    <rect x="1104" y="0" width="52" height="8" rx="4" fill="#1b2740"/>
+    <line x1="1130" y1="8" x2="1130" y2="120" stroke="#2b3c58" stroke-width="2"/>
+    <circle cx="1130" cy="132" r="11" fill="#16233a" stroke="#3b5273" stroke-width="2"/>
+    <text class="pull" x="1130" y="168">PULL ME</text>
+  </g>
 </svg>
